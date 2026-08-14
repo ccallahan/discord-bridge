@@ -29,6 +29,7 @@ appservice:
   hs_token: "${HS_TOKEN}"
 
 bridge:
+  prefix_webhook_messages: true
   username_template: "discord_{{.}}"
   displayname_template: "{{.GlobalName}}"
   permissions:
