@@ -27,14 +27,19 @@ appservice:
     displayname: "Discord Bridge Bot"
   as_token: "${AS_TOKEN}"
   hs_token: "${HS_TOKEN}"
+  public_address: "${PUBLIC_URL}"
 
 bridge:
-  prefix_webhook_messages: true
+  prefix_webhook_messages: false
   username_template: "discord_{{.}}"
   displayname_template: "{{.GlobalName}}"
   permissions:
     "${HOMESERVER_DOMAIN}": "user"
     "${ADMIN_MXID}": "admin"
+  webhooks:
+    allowed: true
+    name_format: "{{.DisplayName}} (Matrix)"
+    avatar_url_format: "{{.AvatarURL}}"
 
 discord:
   bot_token: "${DISCORD_TOKEN}"
