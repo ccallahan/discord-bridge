@@ -30,6 +30,7 @@ appservice:
   public_address: "${PUBLIC_URL}"
 
 bridge:
+  restricted_rooms: true
   public_portals: true
   default_join_rules: "public"
   federate_rooms: true
