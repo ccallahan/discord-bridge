@@ -30,6 +30,9 @@ appservice:
   public_address: "${PUBLIC_URL}"
 
 bridge:
+  public_portals: true
+  default_join_rules: "public"
+  federate_rooms: true
   prefix_webhook_messages: false
   username_template: "discord_{{.}}"
   displayname_template: "{{.GlobalName}}"
